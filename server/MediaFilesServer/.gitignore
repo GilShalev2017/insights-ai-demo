@@ -1,6 +1,7 @@
 ﻿# Ignore build output directories
 bin/
 obj/
+StaticFiles/
 
 # Ignore NuGet packages directory
 packages/

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { InsightsResponse } from '../models/insights-respose';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, catchError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +17,8 @@ export class InsightsService {
   public attachNewVideo$: BehaviorSubject<string> = new BehaviorSubject("");
 
   public isTranslating = false;
+  public isTranslatingEndedWithError = false;
+  public insightError: any = null;
 
   public insightsResponse: InsightsResponse = {
     Transcripts: [],
@@ -32,12 +34,26 @@ export class InsightsService {
   constructor(private http: HttpClient) { }
 
   runInsights(attachedVideoFileName: string, blobUrl: string) {
+    this.insightError = "";
     this.blobUrl = blobUrl;
 
     this.attachNewVideo$.next(attachedVideoFileName);
 
     this.isTranslating = true;
-    return this.http.post(this.insightsBaseUrl,{videoFileName:attachedVideoFileName}).subscribe((response:any) => {
+    this.isTranslatingEndedWithError = false;
+    return this.http.post(this.insightsBaseUrl,{videoFileName:attachedVideoFileName})
+    .pipe(
+      catchError((error) => {
+        this.isTranslating = false;
+        this.isTranslatingEndedWithError = true;
+        this.insightError = error;
+        // Handle the error here, e.g., log it or display an error message
+        console.error('Error:', error);
+        // You can also re-throw the error to propagate it to the subscriber
+        throw error;
+      })
+    )
+    .subscribe((response:any) => {
       this.isTranslating = false;
       this.insightsResponse = response;
       this.insightsResponse.OriginalTranscripts = response.Transcripts;
@@ -62,6 +78,8 @@ export class InsightsService {
   translateSTT(language: string)
   {
     this.isTranslating = true;
+    this.insightError = "";
+    this.isTranslatingEndedWithError = false;
     var translateUrl = this.insightsBaseUrl + "/translate";
     return this.http.post(translateUrl,{Transcripts:this.insightsResponse.OriginalTranscripts,TargetLanguage:language}).subscribe((response:any) => {
         console.log(response);

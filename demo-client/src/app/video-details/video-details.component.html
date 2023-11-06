@@ -46,7 +46,7 @@
   </div>
 </div> -->
 <div mat-dialog-content>
-  <div class="row">
+  <div class="row" *ngIf="this.videoDetails != null">
     <div class="group-box">
       <h3>Video File: {{ videoDetails?.displayName }} </h3>
       <div class="column-pair">

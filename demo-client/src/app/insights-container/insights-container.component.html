@@ -2,13 +2,18 @@
 
     <div class="insights-container" #insightsContainer>
 
-        <div *ngIf="this.insightsService.insightsResponse.Transcripts.length == 0 && !insightsService.isTranslating"
+        <div *ngIf="this.insightsService.insightsResponse.Transcripts.length == 0 
+        && !insightsService.isTranslating && insightsService.isTranslatingEndedWithError==false"
             class="no-records-found">
             <span style="margin: auto;">No Insight Process has started</span>
         </div>
 
         <div *ngIf="insightsService.isTranslating" class="no-records-found">
             <mat-spinner style="margin: auto;" />
+        </div>
+
+        <div *ngIf="insightsService.isTranslatingEndedWithError" class="no-records-found">
+           <span style="margin: auto;">Transcribing ended with error</span>
         </div>
 
         <div *ngIf="!insightsService.isTranslating && this.insightsService.insightsResponse.Transcripts.length > 0">
