@@ -1,0 +1,42 @@
+<div mat-dialog-content>
+    <p>Choose Video File</p>
+    <div class="row">
+        <mat-label>File name:</mat-label>
+        <input type="text" matInput [(ngModel)]="selectedFileName">
+        <button (click)="browseForVideo()" style="margin-left: 5px;">Browse...</button>
+        <input type="file" id="fileInput" (change)="handleFileSelection($event)">
+    </div>
+    <div class="row">
+        <div class="group-box">
+          <h3>Video File Details</h3>
+          <div>
+            <mat-label>Display Name:</mat-label>
+            <span>{{ videoDetails?.displayName }}</span>
+          </div>
+          <div>
+            <mat-label>Resolution:</mat-label>
+            <span>{{ videoDetails?.resolution }}</span>
+          </div>
+          <div>
+            <mat-label>Frame Rate:</mat-label>
+            <span>{{ videoDetails?.framerate }}</span>
+          </div>
+          <div>
+            <mat-label>Duration:</mat-label>
+            <span>{{ videoDetails?.duration }}</span>
+          </div>
+          <div>
+            <mat-label>File Size:</mat-label>
+            <span>{{ videoDetails?.size }}</span>
+          </div>
+          <div>
+            <mat-label>Codec:</mat-label>
+            <span>{{ videoDetails?.codec }}</span>
+          </div>
+        </div>
+    </div>
+</div>
+<div mat-dialog-actions align="end">
+    <button (click)="onOkClick()" style="margin-right: 5px;" [disabled]="!selectedFileName || !videoDetails">OK</button>
+    <button  (click)="onCancelClick()">Cancel</button>
+</div>

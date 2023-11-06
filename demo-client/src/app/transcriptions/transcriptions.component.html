@@ -1,0 +1,43 @@
+<div class="bordered-div" style="border-bottom: 1px solid lightgray;">
+
+  <div class="transcript-container" #transcriptContainer>
+
+    <div *ngIf="this.insightsService.insightsResponse.Transcripts.length == 0 && !insightsService.isTranslating"
+      class="no-records-found">
+      <span style="margin: auto;">No Insight Process has started</span>
+    </div>
+
+    <div *ngIf="insightsService.isTranslating" class="no-records-found">
+      <mat-spinner style="margin: auto;" />
+    </div>
+
+    <div *ngIf="!insightsService.isTranslating && this.insightsService.insightsResponse.Transcripts.length > 0">
+
+      <div class="fixed-menu">
+        <app-languages-menu (selectedLangaugeEvent)="onSelectedLangauge($event)"
+          style="margin-left: auto; margin-right:12px; margin-top:5px;margin-bottom:5px;"
+          class="fixed-menu">
+        </app-languages-menu>
+
+        <button mat-stroked-button (click)="text2Speech()">Text2Speech</button>
+
+        <app-search-bar style="margin-bottom:10px; margin-left:12px; margin-right:12px;" class="fixed-menu" />
+      </div>
+
+      <div class="transcript-line" [class.active]="transcript.isActive" (click)="jumpToTimeFromLabel(transcript)"
+        *ngFor="let transcript of insightsService.insightsResponse.Transcripts; let i = index">
+        <div class="transcript-columns">
+          <div class="timestamp-column">
+            <span class="timestamp">
+              {{ formatTime(transcript.StartInSeconds) }} - {{ formatTime(transcript.EndInSeconds) }}
+            </span>
+          </div>
+          <div class="text-column">
+            {{ transcript.Text }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

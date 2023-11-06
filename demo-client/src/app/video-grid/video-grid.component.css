@@ -1,0 +1,17 @@
+mat-grid-tile {
+    background: lightgray;
+  }
+
+
+/* .grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%; 
+}
+
+
+.mat-grid-tile {
+  flex-grow: 1; 
+  min-width: calc(50% - 16px); 
+  margin: 8px; 
+} */

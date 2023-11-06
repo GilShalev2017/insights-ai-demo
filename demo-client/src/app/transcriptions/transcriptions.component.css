@@ -1,0 +1,65 @@
+.transcript-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-height: 80vh;
+  height: 80vh;
+  overflow-y: auto;
+}
+
+.no-records-found {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.highlighted-line {
+  background-color: blue;
+  color: white;
+}
+
+.timestamp {
+  margin-right: 5px;
+  margin-left: 15px;
+}
+
+.transcript-line {
+  margin-bottom: 10px;
+}
+
+
+.transcript-line:hover .timestamp {
+  background-color: lightgray;
+}
+
+.transcript-line.active {
+  background-color: lightblue;
+}
+
+button[mat-stroked-button] {
+  margin-left: auto;
+}
+
+.fixed-menu {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #fff;
+}
+
+
+.transcript-columns {
+  display: flex;
+  align-items: flex-start;
+}
+
+.timestamp-column {
+  flex: 0.5;
+  white-space: nowrap;
+}
+
+.text-column {
+  flex: 3; 
+  padding-left: 15px; 
+}

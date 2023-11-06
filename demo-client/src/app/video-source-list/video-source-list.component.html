@@ -1,0 +1,8 @@
+<div class="video-source-list" [style.border]="videoService.videoSources.length > 0 ? '1px solid black' : 'none'">
+    <app-video-source
+      *ngFor="let videoSource of videoService.videoSources; let i = index"
+      [videoSource]="videoSource"
+      [style.height.px]="selectedVideoIndex === i ? 80 : 80"
+      (click)="selectVideo(i)"
+    ></app-video-source>
+  </div>

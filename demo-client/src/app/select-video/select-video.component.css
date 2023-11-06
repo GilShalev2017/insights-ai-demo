@@ -1,0 +1,4 @@
+/* Hide the file input element */
+input[type="file"] {
+    display: none;
+  }

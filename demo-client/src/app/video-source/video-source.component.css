@@ -1,0 +1,91 @@
+.source-video button[color="primary"] {
+  color: green;
+}
+
+.source-video button[color="warn"] {
+  color: red;
+}
+
+.source-video-container{
+  border: 2px solid orange;
+}
+
+.example-card {
+  /* max-width: 350px; */
+  margin-bottom: 8px;
+}
+
+.format-container {
+  display: flex;
+  align-items: center;
+  height: 40px; 
+  width: 100%;
+  margin-top: -15px;
+}
+
+
+.format-container mat-label {
+  width: 80px; /* Set the desired label width */
+  margin-right: 12px; /* Add margin between label and input control */
+}
+
+/* Adjust the text input's width as needed */
+.text-input {
+  flex: 1; /* Fill the remaining width */
+  width: 70%;
+  margin-right: 25px;
+  margin-left: -30px;
+}
+
+.format-label{
+  margin-left: 10px;
+}
+
+.source-video h3 {
+  margin-top: 7px; /* Adjust the negative margin to your desired spacing */
+}
+
+.action-buttons {
+  margin-top: -5px;
+  margin-left: 60px;
+  display: flex;
+  justify-content: space-between;
+  width: 20px;
+}
+
+/* Reduce padding and margin for the buttons */
+.action-buttons button {
+  padding: 1px; /* Adjust as needed */
+  margin: 0; /* Remove margin */
+  height: 25px;
+  width: 30px;
+}
+
+.small-icon {
+  font-size: 90%; /* Reduce the size to 75% of their default size */
+}
+
+.play-enabled-button {
+  color: red; /* Set your desired primary color here */
+}
+
+.stop-enabled-button {
+  color: green; /* Set your desired primary color here */
+}
+
+.disabled-button {
+  color: gray; 
+  pointer-events: none; /* Make the button unclickable */
+}
+
+h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 2px;
+}
+
+h3[title] {
+  cursor: pointer;
+}
+

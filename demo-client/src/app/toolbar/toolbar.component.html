@@ -1,0 +1,18 @@
+<mat-toolbar >
+    <button (click)="addVideoSource()" [disabled]="videoService.videoSources.length >= videoService.maxProcessing">Add Video...</button>
+    <input type="file" id="folderInput" multiple (change)="handleFolderSelection($event)">
+</mat-toolbar>
+
+ <!-- <input type="file" id="folderInput" webkitdirectory (change)="handleFolderSelection($event)"> -->
+<!-- <button (click)="hideSources()">
+    << Hide Sources</button> -->
+      <!-- <button >Grid</button> -->
+      <!-- Grid Dropdown Button
+    <mat-form-field appearance="fill" color="accent">
+      <mat-label>Grid</mat-label>
+      <mat-select>
+        <mat-option value="list">List</mat-option>
+        <mat-option value="grid">Grid</mat-option>
+      </mat-select>
+    </mat-form-field> -->
+  

@@ -1,0 +1,31 @@
+.video-container {
+  width: 100%;
+  max-width: 100%; /* Ensure the video does not exceed its parent's width */
+  margin-top: 20px; /* Add top margin */
+  margin-bottom: 20px; /* Add bottom margin */
+  overflow: hidden; /* Ensure content within the container does not overflow */
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+.video-container {
+  position: relative;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.overlay-text {
+  color: white;
+  font-size: 18px;
+}

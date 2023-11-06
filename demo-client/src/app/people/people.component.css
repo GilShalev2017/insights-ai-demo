@@ -1,0 +1,121 @@
+.people-component {
+  margin-bottom: 10px;
+}
+.row-1 {
+  margin-bottom: 10px;
+}
+.face-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Add this property */
+  overflow-x: auto;
+
+  width: 100%; /* Set a fixed width for the container */
+}
+.face {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  position: relative;
+
+  flex-shrink: 0; /* Prevent images from shrinking */
+}
+.row-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+}
+.face:hover {
+  border: 2px solid blue;
+  margin: 8px;
+  padding: 2px;
+}
+.face.selected {
+  border: 2px solid blue; /* Add a blue border to the selected face */
+  margin: 8px; /* Add 2px margin from the border of the image */
+  padding: 2px;
+}
+.row-3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-x: auto;
+}
+.left-column {
+  flex: 0.5;
+}
+.selected-face {
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  max-width: 75px;
+  max-height: 75px;
+  margin: 10px;
+}
+.selected-face-image {
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  max-width: 75px;
+  max-height: 75px;
+  margin-right: 10px;
+}
+.right-column {
+  flex: 5;
+}
+.time-bar {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+}
+.notch {
+  width: 10px;
+  height: 10px;
+  margin: 10px;
+  background-color: black;
+}
+/* For Webkit (Chrome, Safari, Edge) */
+/* You can use the ::-webkit-scrollbar pseudo-element */
+/* Customize scrollbar width and color */
+::-webkit-scrollbar {
+  width: 2px; /* Adjust the width as needed */
+}
+::-webkit-scrollbar-thumb {
+  background-color: #673AB7; /* Scrollbar thumb color */
+  border: 2px solid #fff; /* Separator line-like border */
+}
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Scrollbar track color */
+}
+/* For Firefox */
+/* You can use scrollbar-width property */
+/* The color can't be customized in Firefox */
+.scrollbar {
+  scrollbar-width: thin; /* Adjust to 'thin' for a narrower scrollbar */
+}
+/* For Microsoft Edge (Chromium-based) */
+/* Customize scrollbar width and color */
+.scrollbar-thumb {
+  background-color: #673AB7; /* Scrollbar thumb color */
+  border: 2px solid #fff; /* Separator line-like border */
+}
+.scrollbar-track {
+  background-color: #f1f1f1; /* Scrollbar track color */
+}
+/* Apply scrollbar styling to your specific element */
+.face-list,
+.time-bar {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1; /* Scrollbar thumb and track colors */
+}
+.selected-face-text p {
+  margin: 1px;
+}
+
+
+/* .selected-face-text {
+   Add styling for the paragraphs here 
+} */

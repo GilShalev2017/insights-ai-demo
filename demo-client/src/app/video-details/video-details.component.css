@@ -1,0 +1,22 @@
+.column-pair {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*margin-bottom: 10px;  Adjust the margin as needed */
+    padding: 5px; 
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 70%;
+  }
+  .column-pair div {
+    flex: 1;
+    padding: 5px; 
+    
+    /* text-align: center;
+    border: 1px solid lightgray; */
+  }
+
+  /* Additional CSS styles you may have */
+  .group-box {
+    /* Your existing styles for the group box */
+  }

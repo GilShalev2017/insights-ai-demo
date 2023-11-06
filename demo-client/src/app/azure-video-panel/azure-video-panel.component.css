@@ -1,0 +1,12 @@
+.video-container {
+    width: 100%;
+    max-width: 100%; /* Ensure the video does not exceed its parent's width */
+    margin-top: 20px; /* Add top margin */
+    margin-bottom: 20px; /* Add bottom margin */
+    overflow: hidden; /* Ensure content within the container does not overflow */
+  }
+  
+  video {
+    width: 100%;
+    height: auto;
+  }

@@ -1,0 +1,27 @@
+<button mat-button [matMenuTriggerFor]="fileMenu">
+  File
+</button>
+  <mat-menu #fileMenu="matMenu">
+    <button mat-menu-item (click)="enrollFromImage()">Enroll from Image(s)</button>
+    <button mat-menu-item (click)="enrollFromDirectory()">Enroll from Directory</button>
+  </mat-menu>
+  
+  <button mat-button [matMenuTriggerFor]="toolsMenu">
+    Tools
+  </button>
+  <mat-menu #toolsMenu="matMenu">
+    <button mat-menu-item (click)="openSettings()">Settings...</button>
+    <button mat-menu-item (click)="openWatchList()">Watch List...</button>
+    <button mat-menu-item (click)="clearWatchList()">Clear Watch List</button>
+    <button mat-menu-item (click)="exportEvents()">Export Events</button>
+    <button mat-menu-item (click)="optimizeModels()">Optimize Models</button>
+  </mat-menu>
+  
+  <button mat-button [matMenuTriggerFor]="helpMenu">
+    Help
+  </button>
+  <mat-menu #helpMenu="matMenu">
+    <button mat-menu-item (click)="aboutApp()">About this app</button>
+  </mat-menu>
+
+  

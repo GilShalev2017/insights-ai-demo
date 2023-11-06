@@ -1,0 +1,15 @@
+<div class="subject-list-buttons">
+    <!-- <button style="margin-left: 5px;">Add Template</button> -->
+    <button style="margin-left: 15px; margin-top: 15px; margin-bottom: 15px;" (click)="clearSubjects()">Clear</button>
+    <input style="margin-left: 15px;" type="checkbox" [(ngModel)]="autoScroll">Auto Scroll
+    <!-- <button color="primary" (click)="rotate()"> -->
+        <!-- <mat-icon>crop_rotate</mat-icon> -->
+    <!-- </button> -->
+</div>
+<div class="subjects-list" #subjectListContainer>
+    <app-subject
+      *ngFor="let subject of subjects"
+      [data]="subject"/>
+  </div>
+  <!-- [image2]="subject.image2" -->
+ 

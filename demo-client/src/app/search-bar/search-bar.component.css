@@ -1,0 +1,26 @@
+.search-container {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    
+    border: 1px solid lightgray;
+    
+    margin-top: 3px;
+}
+
+.search-container input {
+    height: 25px;
+    padding: 5px; /* Adjust padding to your preference */
+    width: 100%;
+    border: none; /* Remove the border */
+    outline: none; /* Remove the outline on focus */
+}
+
+.search-container i {
+    font-size: 24px; 
+    color: #673AB7;
+    margin-left: 15px;
+    cursor: pointer;
+}

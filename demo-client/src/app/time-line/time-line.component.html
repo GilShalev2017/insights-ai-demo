@@ -1,0 +1,14 @@
+<div class="timeline">
+  
+  <div class="horizontal-line" *ngIf="data2?.length && data2.length > 0"></div>
+
+  <!-- <div class="time-range" (click)="jumpTo(range.from!)" *ngFor="let range of data.timeRangeAndScoreArray"
+    [ngStyle]="{ 'top.%': '38', 'left.%': calculateNotchPosition(range.from), 'width.%': calculateTimeRangeWidth(range.from, range.to) }">
+  </div> -->
+
+
+  <div class="time-range" (click)="jumpTo(range.from!)" *ngFor="let range of data2"
+    [ngStyle]="{ 'top.%': '38', 'left.%': calculateNotchPosition(range), 'width.%': calculateTimeRangeWidth(range) }">
+  </div>
+  
+</div>

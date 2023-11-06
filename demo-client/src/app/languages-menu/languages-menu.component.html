@@ -1,0 +1,50 @@
+<button mat-stroked-button [matMenuTriggerFor]="menu"
+style="width: 100px;">Translate</button>
+
+<mat-menu #menu="matMenu">
+<button mat-menu-item (click)="selectLanguage('English')">
+  <span>English</span>
+</button>
+<button mat-menu-item (click)="selectLanguage('Spanish')">
+  <span>Spanish</span>
+</button>
+<button mat-menu-item (click)="selectLanguage('French')">
+  <span>French</span>
+</button>
+<button mat-menu-item (click)="selectLanguage('Hebrew')">
+  <span>Hebrew</span>
+</button>
+<button mat-menu-item (click)="selectLanguage('Turkish')">
+  <span>Turkish</span>
+</button>
+<button mat-menu-item (click)="selectLanguage('German')">
+  <span>German</span>
+</button>
+<button mat-menu-item (click)="selectLanguage('Arabic')">
+    <span>Arabic</span>
+  </button>
+
+
+  <button mat-menu-item (click)="selectLanguage('Portuguese')">
+    <span>Portuguese</span>
+  </button>
+  <button mat-menu-item (click)="selectLanguage('Turkish')">
+    <span>Turkish</span>
+  </button>
+  <button mat-menu-item (click)="selectLanguage('Polish')">
+    <span>Polish</span>
+  </button>
+  <button mat-menu-item (click)="selectLanguage('Russian')">
+    <span>Russian</span>
+  </button>
+
+  <button mat-menu-item (click)="selectLanguage('Chinese')">
+    <span>Chinese</span>
+
+    
+  </button>
+  <button mat-menu-item (click)="selectLanguage('Japanese')">
+    <span>Japanese</span>
+  </button>
+
+</mat-menu>

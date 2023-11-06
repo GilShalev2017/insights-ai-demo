@@ -1,0 +1,21 @@
+<mat-card class="example-card">
+  <div class="source-video-container" style="height: 100px;">
+    <div class="source-video">
+      <h3 style="text-align: center;" title="{{ videoSource.title }}">Video Source: {{ videoSource.title }}</h3>
+      <div class="format-container">
+          <mat-label class="format-label" >Format:</mat-label>
+          <input type="text" [(ngModel)]="videoSource.formatDetails" class="text-input">
+      </div>
+      <div class="action-buttons">
+        <!-- <button mat-icon-button [class.play-enabled-button]="!isPlaying" [class.disabled-button]="isPlaying" (click)="play()" [disabled]="isPlaying"><mat-icon class="small-icon">play_arrow</mat-icon></button>
+        <button mat-icon-button [class.stop-enabled-button]="isPlaying" [class.disabled-button]="!isPlaying" (click)="stop()" [disabled]="!isPlaying" ><mat-icon class="small-icon">stop</mat-icon></button> -->
+        <button mat-icon-button [class.play-enabled-button]="!isPlaying" [class.disabled-button]="isPlaying" (click)="play()" [disabled]="isPlaying"><mat-icon class="small-icon">play_arrow</mat-icon></button>
+        <button mat-icon-button [class.stop-enabled-button]="isPlaying" [class.disabled-button]="!isPlaying" (click)="stop()"  [disabled]="!isPlaying"><mat-icon class="small-icon">stop</mat-icon></button>
+        
+        <button mat-icon-button color="warn" (click)="hide()"><mat-icon class="small-icon">visibility_off</mat-icon></button>
+        <button mat-icon-button color="primary" (click)="replay()"><mat-icon class="small-icon">replay</mat-icon></button>
+      </div>
+    </div>
+  </div>
+</mat-card>
+<!-- [color]="isPlaying ? 'warn' : 'primary'" -->

@@ -1,0 +1,21 @@
+.timeline {
+  position: relative;
+  height: 40px;
+  width: 200px;
+  /* width: 100%; */
+  /* border: 2px solid orange; */
+}
+.horizontal-line {
+  position: absolute;
+  top: 50%; 
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #ccc; 
+}
+.time-range {
+  position: absolute;
+  height: 10px; 
+  background-color: #2196F3; 
+  opacity: 0.7;
+}

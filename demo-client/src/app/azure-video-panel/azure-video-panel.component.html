@@ -1,0 +1,8 @@
+<div class="video-container">
+  <div *ngIf="insightsService?.blobUrl!=null">
+    <video #videoPlayer controls>
+      <source [src]="insightsService.blobUrl" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>

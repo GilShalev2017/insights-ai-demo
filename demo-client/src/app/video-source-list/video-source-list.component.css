@@ -1,0 +1,8 @@
+.video-source-list{
+    border: 1px solid black;  
+    height: 100%;
+}
+
+.video-source-list:empty {
+    opacity: 1;
+  }

@@ -1,0 +1,8 @@
+<div class="insight-bordered-div" style="border-bottom: 1px solid lightgray;">
+    <p class="main-paragraph">Key Points</p>
+    <ul>
+      <li *ngFor="let point of insightsService.insightsResponse.KeyPointsList" >
+        <span>{{point}}</span>
+      </li>  
+    </ul>
+</div>

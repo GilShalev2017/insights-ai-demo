@@ -1,0 +1,9 @@
+
+<div class="video-container">
+    <video #videoElement controls>
+        <source type="video/mp4">
+    </video>
+    <div class="text-overlay" *ngIf="showOverlay">
+        <p class="overlay-text">{{statusMessage}}</p>
+    </div>
+</div>

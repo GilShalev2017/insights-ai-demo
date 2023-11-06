@@ -1,0 +1,26 @@
+<mat-card class="subject-card">
+  <mat-card-header>
+    <div class="card-header-content">
+      <span>{{ data.identifiedPersonName }}</span>
+    </div>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="main-area centered">
+      <img src="{{ data.image1 }}" alt="Image 1" class="image">
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <div class="person-name">
+     
+      <!-- <app-time-line [data]="timelineData"></app-time-line> -->
+      
+      <app-time-line [data2]="data.timeRangeAndScoreArray2!"/>
+
+      <ul>
+        <li *ngFor="let range of data.timeRangeAndScoreArray ">
+          <span (click)="jumpTo(range.from!)">{{range.from | date:'HH:mm:ss'}}-{{range.to | date:'HH:mm:ss'}}</span>
+        </li>
+      </ul>
+    </div>
+  </mat-card-actions>
+</mat-card>

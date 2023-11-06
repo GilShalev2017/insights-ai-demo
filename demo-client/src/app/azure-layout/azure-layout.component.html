@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="left-column">
+    <app-azure-video-panel />
+    <app-video-details/>
+  </div>
+
+  <div class="right-column">
+    <div class="tab-toolbar">
+      <mat-tab-group mat-stretch-tabs="false">
+        <mat-tab label="Insights">
+          <app-insights-container/>
+        </mat-tab>
+        <mat-tab label="Timeline">
+          <app-transcriptions/>
+        </mat-tab>
+      </mat-tab-group>
+      <div class="toolbar-buttons">
+        <button mat-icon-button >
+          <mat-icon>cloud_download</mat-icon>
+        </button>
+        <button mat-icon-button >
+          <mat-icon>language</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

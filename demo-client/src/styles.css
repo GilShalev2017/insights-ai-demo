@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import "~@angular/material/prebuilt-themes/indigo-pink.css";  */
+.bordered-div {
+    border: solid 1px lightgray;
+    padding: 5px;
+    border-bottom: 0px;
+  }
+
+  .insight-bordered-div {
+    padding: 5px;
+    border-bottom: solid 1px lightgray;
+  }
+
+/* .bordered-div:last-child {
+  border-bottom: 1px solid lightgray;
+} */
+
+.main-paragraph{
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+.indented-paragraph {
+  margin-left: 15px;
+}

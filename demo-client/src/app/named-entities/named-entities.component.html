@@ -1,0 +1,16 @@
+<div class="insight-bordered-div">
+    <p class="main-paragraph">11 named entities</p>
+    <p style="margin-left: 15px;">6 Locations</p>
+    <mat-chip-listbox aria-label="Fish selection" style="margin-left: 15px;">
+        <mat-chip-option>Ukraine</mat-chip-option>
+        <mat-chip-option>Northern Ireland</mat-chip-option>
+        <mat-chip-option color="accent" selected>Canada</mat-chip-option>
+        <mat-chip-option>Hiroshime</mat-chip-option>
+        <mat-chip-option>Japan</mat-chip-option>
+        <mat-chip-option>America</mat-chip-option>
+    </mat-chip-listbox>
+    <p style="margin-left: 15px;">{{peopleService.faces.length}} People</p>
+    <mat-chip-listbox aria-label="Fish selection" style="margin-left: 15px;">
+        <mat-chip-option *ngFor="let face of peopleService.faces">{{face.name}}</mat-chip-option>
+    </mat-chip-listbox>
+</div>

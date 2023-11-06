@@ -1,0 +1,31 @@
+<div class="bordered-div" style="border-bottom: 1px solid lightgray;">
+
+    <div class="insights-container" #insightsContainer>
+
+        <div *ngIf="this.insightsService.insightsResponse.Transcripts.length == 0 && !insightsService.isTranslating"
+            class="no-records-found">
+            <span style="margin: auto;">No Insight Process has started</span>
+        </div>
+
+        <div *ngIf="insightsService.isTranslating" class="no-records-found">
+            <mat-spinner style="margin: auto;" />
+        </div>
+
+        <div *ngIf="!insightsService.isTranslating && this.insightsService.insightsResponse.Transcripts.length > 0">
+
+            <div>
+                <app-search-bar />
+                <app-people />
+                <app-audio-effect />
+                <app-labels />
+                <app-named-entities />
+                <app-emotions />
+                <app-summary />
+                <app-sentiment />
+                <app-key-points />
+                <app-action-items />
+            </div>
+
+        </div>
+    </div>
+</div>

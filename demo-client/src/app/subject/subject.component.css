@@ -1,0 +1,32 @@
+.image{
+    /* width: 96px; */
+    height: 96px;
+    margin: 5px;
+}
+
+mat-card-header, mat-card-actions {
+    font-weight: bold;
+  }
+  
+  .person-name{
+    text-align: center;
+    margin:auto;
+  }
+  .card-header-content{
+    text-align: center;
+    margin:auto;
+  }
+.subject-card{
+   margin:5px;
+}
+
+mat-card {
+    /* width: 300px; */
+    margin:5px;
+  }
+
+  .main-area.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

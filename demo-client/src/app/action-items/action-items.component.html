@@ -1,0 +1,8 @@
+<div style="padding: 5px;">
+    <p class="main-paragraph">Action Items</p>
+    <ul>
+        <li *ngFor="let actionItem of insightsService.insightsResponse.ActionItemsList">
+          {{actionItem}}
+        </li>  
+      </ul>
+</div>
