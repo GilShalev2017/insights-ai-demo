@@ -12,11 +12,13 @@ export class WebSocketService {
   private hubConnection!: HubConnection;
 
   public HUB_URL = "https://localhost:5001/chatHub";
+  //public HUB_URL = "http://34.229.229.19:5000/chatHub";
 
   constructor(private http: HttpClient) {
 
     this.hubConnection = new HubConnectionBuilder()
-      .withUrl('https://localhost:5001/chatHub', {
+       .withUrl('http://34.229.229.19:5000/chatHub', {
+      //.withUrl('https://34.229.229.19:5000/chatHub', {
         transport: signalR.HttpTransportType.WebSockets,
         skipNegotiation: true,
       })

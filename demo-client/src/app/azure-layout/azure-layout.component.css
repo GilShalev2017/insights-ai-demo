@@ -5,12 +5,12 @@
 }
 
 .left-column {
-  width: 50%;
+  /* width: 50%; */
   padding: 10px;
 }
 
 .right-column {
-  width: 50%;
+  /* width: 50%; */
   padding: 10px;
 
   position: relative;

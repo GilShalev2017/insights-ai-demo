@@ -9,6 +9,7 @@ import { BehaviorSubject, catchError } from 'rxjs';
 export class InsightsService {
 
   private insightsBaseUrl = 'https://localhost:5001/api/insights';
+  //private insightsBaseUrl = 'http://34.229.229.19:5000/api/insights';
   blobUrl: string | undefined;
   
   playAzureVideo$: BehaviorSubject<number> = new BehaviorSubject(0);

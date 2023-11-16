@@ -1,0 +1,18 @@
+<div style="width: 500px; height: 500px; background: yellow;">
+    <as-split direction="horizontal">
+        <as-split-area [size]="40">
+            <p>LEFT</p>
+        </as-split-area>
+
+        <as-split-area [size]="60">
+            <as-split direction="vertical">
+                <as-split-area [size]="40">
+                    <p>RIGHT UP</p>
+                </as-split-area>
+                <as-split-area [size]="60">
+                    <p>RIGHT BOTTOM</p>
+                </as-split-area>
+            </as-split>
+        </as-split-area>
+    </as-split>
+</div>

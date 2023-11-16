@@ -5,8 +5,6 @@ VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FRServer", "MediaFilesServer\FRServer.csproj", "{9C80930B-7479-4337-936D-5BC962D03DB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FRProcessor", "FRProcessor\FRProcessor.csproj", "{548FCC58-4EB4-4669-8078-5201B202AE01}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{9C80930B-7479-4337-936D-5BC962D03DB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C80930B-7479-4337-936D-5BC962D03DB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C80930B-7479-4337-936D-5BC962D03DB5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{548FCC58-4EB4-4669-8078-5201B202AE01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{548FCC58-4EB4-4669-8078-5201B202AE01}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{548FCC58-4EB4-4669-8078-5201B202AE01}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{548FCC58-4EB4-4669-8078-5201B202AE01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

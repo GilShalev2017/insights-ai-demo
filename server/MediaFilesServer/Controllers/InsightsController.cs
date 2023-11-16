@@ -60,7 +60,7 @@ namespace FRServer.Controllers
 
             InsightUtilities insightUtilities = new InsightUtilities();
 
-            string accessToken = "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";
+            string accessToken = "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";
 
             TextAnalysisResponse? textAnalysisResponse = await insightUtilities.GetOpenAiAllTextAnalysisData(accessToken, transcriptsString);
 
@@ -143,8 +143,8 @@ namespace FRServer.Controllers
             string audioFileName = "videoplayback.mp3";
 
             string apiUrl = "https://api.openai.com/v1/audio/transcriptions";
-
-            string accessToken = "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";
+            
+            string accessToken = "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";
 
             var transcripts = await insightUtilities.GetOpenAIAudioBasedCaptions(audioFilePath, audioFileName, apiUrl, accessToken);
 

@@ -1,0 +1,3 @@
+C:\Temp\Sandbox\insights-ai-demo\server\FRProcessor\obj\Debug\FRProcessor.csproj.AssemblyReference.cache
+C:\Temp\Sandbox\insights-ai-demo\server\FRProcessor\obj\Debug\FRProcessor.csproj.SuggestedBindingRedirects.cache
+C:\Temp\Sandbox\insights-ai-demo\server\FRProcessor\obj\Debug\FRProcessor.csproj.CoreCompileInputs.cache

@@ -56,6 +56,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { InsightsContainerComponent } from './insights-container/insights-container.component';
 import { TimeSpanPipe } from './pipes/time-span.pipe';
 
+import { AngularSplitModule } from 'angular-split';
+import { SplitExampleComponent } from './split-example/split-example.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -86,7 +89,8 @@ import { TimeSpanPipe } from './pipes/time-span.pipe';
     LanguagesMenuComponent,
     VideoDetailsComponent,
     InsightsContainerComponent,
-    TimeSpanPipe
+    TimeSpanPipe,
+    SplitExampleComponent
   ],
   imports: [
     BrowserModule,
@@ -113,7 +117,8 @@ import { TimeSpanPipe } from './pipes/time-span.pipe';
     MatTabsModule,
     MatChipsModule,
     MatSliderModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    AngularSplitModule
   ],
   providers: [],
   bootstrap: [TabbedLayoutComponent]

@@ -14,6 +14,11 @@ export class VideoService {
   private videoBaseUrl = 'https://localhost:5001/api/mediaFiles';
   private facesBaseUrl = 'https://localhost:5001/api/faceFiles';
   private frBaseUrl    = 'https://localhost:5001/api/frameRecognition';
+
+  // private videoBaseUrl = 'http://34.229.229.19:5000/api/MediaFiles';
+  // private facesBaseUrl = 'http://34.229.229.19:5000/api/faceFiles';
+  // private frBaseUrl    = 'http://34.229.229.19:5000/api/frameRecognition';
+
   maxProcessing:number = 4;
   
   playVideo$: BehaviorSubject<string> = new BehaviorSubject("");
