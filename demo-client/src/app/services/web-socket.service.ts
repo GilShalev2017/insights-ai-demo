@@ -17,7 +17,7 @@ export class WebSocketService {
   constructor(private http: HttpClient) {
 
     this.hubConnection = new HubConnectionBuilder()
-       .withUrl('http://34.229.229.19:5000/chatHub', {
+       .withUrl('https://localhost:5001/chatHub', {
       //.withUrl('https://34.229.229.19:5000/chatHub', {
         transport: signalR.HttpTransportType.WebSockets,
         skipNegotiation: true,
